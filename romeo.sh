@@ -4,8 +4,7 @@ if [[ -f 'romeo.txt' ]]; then
     echo 'File already exists'
 else
     echo 'Downloading file...'
-    curl https://downloads.codingcoursestv.eu/055%20-%20bash/if/romeo.txt -o romeo.txt --silent
-    if [[ $? -eq 0 ]]; then
+    if curl https://downloads.codingcoursestv.eu/055%20-%20bash/if/romeo.txt -o romeo.txt --silent; then
         echo 'Download completed successfully'
     else
         echo 'Download failed' >&2
