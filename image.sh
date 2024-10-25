@@ -4,11 +4,8 @@ for filename in image-*; do
     if [[ "${filename}" == *.thumbnail.* ]]; then
         continue
     fi
-    echo "${filename}"
-    
-    no_extension="${filename%.*}"
 
-    thumbnail_filename="${no_extension}.thumbnail.jpg"
+    thumbnail_filename="${filename%.*}.thumbnail.jpg"
     if [[ -f "${thumbnail_filename}" ]]; then
         continue
     fi
